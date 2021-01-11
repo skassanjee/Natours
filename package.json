@@ -1,16 +1,32 @@
 {
   "name": "starter",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.11.10",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.6"
-  }
+    "nodemon": "^2.0.6",
+    "win-node-env": "^0.4.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skassanjee/Natours.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skassanjee/Natours/issues"
+  },
+  "homepage": "https://github.com/skassanjee/Natours#readme",
+  "description": ""
 }

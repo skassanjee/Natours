@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config({ path: 'config.env' })
 const express = require('express');
 const fs = require('fs');
 const app = express();
@@ -6,8 +7,10 @@ const tourRouter = require('./routes/tourRoutes')
 const userRouter = require('./routes/userRoutes')
 
 //middleware
+if(process.env.NODE_ENV='development'){
+    app.use(morgan('dev'))
+}
 
-app.use(morgan('dev'))
 
 app.use(express.json());
 
